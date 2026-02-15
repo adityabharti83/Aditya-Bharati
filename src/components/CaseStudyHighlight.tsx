@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, TrendingUp, Clock, Target, BarChart3, Github, ArrowRight, Zap } from 'lucide-react';
+import { Shield, TrendingUp, Clock, Target, BarChart3, ArrowRight, Zap } from 'lucide-react';
 
 export const CaseStudyHighlight: React.FC = () => {
   const caseStudy = {
