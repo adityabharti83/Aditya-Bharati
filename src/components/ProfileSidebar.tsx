@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { PersonalInfo } from '../types';
 import { cn } from '../utils/cn';
 
@@ -12,8 +12,6 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ personalInfo }) 
   const contactItems = [
     { icon: Mail, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}` },
     { icon: Phone, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone}` },
-    { icon: Linkedin, label: 'LinkedIn', value: 'LinkedIn Profile', href: personalInfo.linkedin },
-    { icon: Github, label: 'GitHub', value: 'GitHub Profile', href: personalInfo.github },
   ];
 
   return (
@@ -73,8 +71,8 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ personalInfo }) 
             <motion.a
               key={item.label}
               href={item.href}
-              target={item.label === 'LinkedIn' || item.label === 'GitHub' ? '_blank' : undefined}
-              rel={item.label === 'LinkedIn' || item.label === 'GitHub' ? 'noopener noreferrer' : undefined}
+              target={item.label === 'Email' || item.label === 'Phone' ? '_self' : undefined}
+              rel={item.label === 'Email' || item.label === 'Phone' ? undefined : undefined}
               className={cn(
                 "flex items-center space-x-3 p-3 rounded-xl transition-all duration-200",
                 "hover:bg-gray-50 dark:hover:bg-gray-800 hover:scale-105 group"

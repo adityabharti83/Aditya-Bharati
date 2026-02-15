@@ -4,8 +4,6 @@ export interface PersonalInfo {
   bio: string;
   email: string;
   phone: string;
-  linkedin: string;
-  github: string;
   profileImage?: string;
 }
 
@@ -22,8 +20,6 @@ export interface Project {
   description: string;
   image?: string;
   technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
   featured: boolean;
 }
 

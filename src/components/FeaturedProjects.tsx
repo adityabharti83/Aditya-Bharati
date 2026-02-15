@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, BarChart3, Shield, TrendingUp, ArrowRight } from 'lucide-react';
+import { BarChart3, Shield, TrendingUp } from 'lucide-react';
 import { projects } from '../data/personalData';
 
 const getProjectIcon = (title: string) => {
@@ -72,37 +72,6 @@ export const FeaturedProjects: React.FC = () => {
               <span className="px-3 py-1 bg-background border border-border rounded-lg text-xs text-muted">
                 +{project.technologies.length - 4}
               </span>
-            )}
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex space-x-3">
-            {project.githubUrl && (
-              <motion.a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 bg-background hover:bg-primary/10 border border-border hover:border-primary rounded-lg text-muted hover:text-white transition-all duration-300 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Github className="w-4 h-4 group-hover:text-white" />
-                <span className="text-sm group-hover:text-white">Code</span>
-              </motion.a>
-            )}
-            
-            {project.liveUrl && (
-              <motion.a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg transition-all duration-300 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="text-sm">View</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.a>
             )}
           </div>
         </div>

@@ -60,8 +60,6 @@ export const personalInfo: PersonalInfo = {
   bio: "Computer Science Engineering student (B.E., 2025) specializing in data analysis and visualization. Skilled in Python, SQL, Power BI, and machine learning. Passionate about transforming data into actionable business insights.",
   email: "adityabharti6088@gmail.com",
   phone: "+91 8379084993",
-  linkedin: "https://linkedin.com/in/aditya-bharti",
-  github: "https://github.com/adityabharti83",
   profileImage: "/Profile Picture.jpg",
 };
 
@@ -106,7 +104,6 @@ export const projects: Project[] = [
     title: "Transaction Fraud Detection Dashboard",
     description: "Built anomaly detection using Isolation Forest, Local Outlier Factor, and rule-based methods on 100K+ transactions. Created Power BI dashboard with automated refresh, heatmaps, and interactive filters. Reduced manual review time by 40%, identified that 78% of frauds occurred at night, enabling targeted monitoring.",
     technologies: ["Python", "scikit-learn", "Power BI", "Isolation Forest", "Pandas", "NumPy"],
-    githubUrl: "https://github.com/adityabharti83/fraud-detection-dashboard",
     featured: true,
   },
   {
@@ -114,7 +111,6 @@ export const projects: Project[] = [
     title: "Retail Sales Analysis & Visualization Dashboard",
     description: "Analyzed 50K+ retail records to uncover sales trends and customer behaviors. Built Power BI dashboard with KPIs, geo maps, and filters. Identified top-performing products and regions, optimized discount strategy using insights.",
     technologies: ["Python", "Power BI", "Pandas", "SQL", "Data Visualization"],
-    githubUrl: "https://github.com/adityabharti83/retail-sales-analysis",
     featured: true,
   },
   {
@@ -122,7 +118,6 @@ export const projects: Project[] = [
     title: "Customer Churn Prediction Case Study",
     description: "Analyzed 10K+ records to identify factors influencing churn. Trained Logistic Regression model achieving 82% accuracy. Provided insights for improving customer retention strategies.",
     technologies: ["Python", "scikit-learn", "Logistic Regression", "Pandas", "Matplotlib"],
-    githubUrl: "https://github.com/adityabharti83/customer-churn-prediction",
     featured: false,
   },
 ];

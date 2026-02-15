@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { personalInfo, contactData } from '../data/personalData';
 
 export const ContactPage: React.FC = () => {
@@ -89,58 +89,6 @@ export const ContactPage: React.FC = () => {
                       className="text-muted hover:text-primary transition-colors duration-300"
                     >
                       {personalInfo.email}
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* LinkedIn Card */}
-              <motion.div
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)"
-                }}
-                className="bg-card border border-border rounded-2xl p-6 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                    <Linkedin className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">LinkedIn</h3>
-                    <a 
-                      href={personalInfo.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted hover:text-primary transition-colors duration-300"
-                    >
-                      Connect with me
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* GitHub Card */}
-              <motion.div
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)"
-                }}
-                className="bg-card border border-border rounded-2xl p-6 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                    <Github className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">GitHub</h3>
-                    <a 
-                      href={personalInfo.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted hover:text-primary transition-colors duration-300"
-                    >
-                      View my work
                     </a>
                   </div>
                 </div>

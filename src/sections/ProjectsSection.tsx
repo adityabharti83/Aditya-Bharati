@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star, TrendingUp, BarChart3, Shield } from 'lucide-react';
+import { Star, TrendingUp, BarChart3, Shield } from 'lucide-react';
 import { projects } from '../data/personalData';
 import { Project, NavigationSection } from '../types';
 
@@ -73,33 +73,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSectionChang
               <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm">
                 +{project.technologies.length - 4}
               </span>
-            )}
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex space-x-3">
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 hover:bg-gray-800 text-white rounded-lg font-medium transition-colors duration-200"
-              >
-                <Github className="w-4 h-4" />
-                <span>View Code</span>
-              </a>
-            )}
-            
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors duration-200"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
             )}
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, TrendingUp, Clock, Target, BarChart3, Download, ExternalLink, Github } from 'lucide-react';
+import { Shield, TrendingUp, Clock, Target, BarChart3, Download } from 'lucide-react';
 
 export const CaseStudySection: React.FC = () => {
   const caseStudyData = {
@@ -25,8 +25,7 @@ export const CaseStudySection: React.FC = () => {
       "Identified critical pattern: 78% of fraudulent transactions occurred between 10 PM - 6 AM",
       "Enabled proactive monitoring with automated risk scoring"
     ],
-    technologies: ["Python", "scikit-learn", "Power BI", "SQL", "Pandas", "NumPy", "Isolation Forest"],
-    githubUrl: "https://github.com/adityabharti83/fraud-detection-dashboard"
+    technologies: ["Python", "scikit-learn", "Power BI", "SQL", "Pandas", "NumPy", "Isolation Forest"]
   };
 
   return (
@@ -214,16 +213,6 @@ export const CaseStudySection: React.FC = () => {
           behind this fraud detection system.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={caseStudyData.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-3 bg-white text-blue-600 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
-          >
-            <Github className="w-5 h-5" />
-            <span>View on GitHub</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
           <button className="inline-flex items-center space-x-2 px-8 py-3 bg-blue-800 hover:bg-blue-900 text-white rounded-xl font-semibold transition-all duration-300">
             <Download className="w-5 h-5" />
             <span>Download Case Study PDF</span>

@@ -53,23 +53,7 @@ export const CTA: React.FC = () => {
               <Mail className="w-5 h-5" />
               <span>{personalInfo.email}</span>
             </a>
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors duration-200"
-            >
-              LinkedIn Profile
-            </a>
-            <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors duration-200"
-            >
-              GitHub Profile
-            </a>
-          </div>
+            </div>
         </motion.div>
       </div>
     </section>

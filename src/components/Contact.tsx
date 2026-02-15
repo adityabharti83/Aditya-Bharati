@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { personalInfo } from '../data/personalData';
 
 export const Contact: React.FC = () => {
@@ -96,36 +96,7 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="pt-8">
-              <h4 className="text-lg font-semibold text-white mb-4">Connect on Social</h4>
-              <div className="flex space-x-4">
-                <a
-                  href={personalInfo.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 hover:scale-110"
-                >
-                  <Github className="w-6 h-6 text-muted hover:text-white" />
-                </a>
-                <a
-                  href={personalInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 hover:scale-110"
-                >
-                  <Linkedin className="w-6 h-6 text-muted hover:text-white" />
-                </a>
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 hover:scale-110"
-                  onClick={(e) => { e.preventDefault(); window.open(`mailto:${personalInfo.email}`, '_blank'); }}
-                >
-                  <Mail className="w-6 h-6 text-muted hover:text-white" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
           {/* Contact Form */}
           <motion.div

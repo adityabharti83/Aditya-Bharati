@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, BarChart3, Shield, TrendingUp, ArrowRight } from 'lucide-react';
+import { BarChart3, Shield, TrendingUp } from 'lucide-react';
 import { projects } from '../data/personalData';
 
 const getProjectIcon = (title: string) => {
@@ -78,37 +78,6 @@ export const FeaturedProject: React.FC = () => {
                     <span className="px-3 py-1 bg-card border border-border rounded-lg text-xs text-muted">
                       +{project.technologies.length - 4}
                     </span>
-                  )}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex space-x-4">
-                  {project.githubUrl && (
-                    <motion.a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-6 py-3 bg-card hover:bg-background border border-border hover:border-primary rounded-xl font-medium transition-all duration-300 group"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github className="w-5 h-5 text-muted group-hover:text-white" />
-                      <span className="text-muted group-hover:text-white">GitHub</span>
-                    </motion.a>
-                  )}
-                  
-                  {project.liveUrl && (
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-all duration-300 group"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span className="text-white">View Case Study</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </motion.a>
                   )}
                 </div>
               </motion.div>

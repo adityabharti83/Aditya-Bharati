@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { personalInfo } from '../data/personalData';
 
 export const Footer: React.FC = () => {
@@ -23,34 +23,13 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center space-x-6">
-            <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors duration-200"
-              aria-label="GitHub"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-white transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="text-muted hover:text-white transition-colors duration-200"
-              aria-label="Email"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="text-muted hover:text-white transition-colors duration-200"
+            aria-label="Email"
+          >
+            <Mail className="w-6 h-6" />
+          </a>
 
           {/* Copyright */}
           <div className="text-center md:text-right">

@@ -60,8 +60,7 @@ export const CaseStudyHighlight: React.FC = () => {
         description: "Reduced alert fatigue and improved analyst productivity"
       }
     ],
-    technologies: ["Python", "scikit-learn", "Power BI", "SQL", "Pandas", "NumPy", "Isolation Forest"],
-    githubUrl: "https://github.com/adityabharti83/fraud-detection-dashboard"
+    technologies: ["Python", "scikit-learn", "Power BI", "SQL", "Pandas", "NumPy", "Isolation Forest"]
   };
 
   return (
@@ -218,22 +217,7 @@ export const CaseStudyHighlight: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* CTA Button */}
-            <motion.a
-              href={caseStudy.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="inline-flex items-center space-x-3 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>View Full Implementation</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.a>
-          </motion.div>
+            </motion.div>
 
           {/* Right Column - Dashboard Preview */}
           <motion.div

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Code } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Code } from 'lucide-react';
 import { ContactForm } from '../types';
 import { personalInfo, contactData } from '../data/personalData';
 
@@ -62,26 +62,23 @@ export const ContactSection: React.FC = () => {
     }
   ];
 
-  const socialProfiles = [
+  const profiles = [
     {
-      icon: Github,
-      label: 'GitHub',
-      value: 'adityabharti83',
-      href: personalInfo.github,
-      description: 'Check out my code'
+      icon: Mail,
+      label: 'Email',
+      value: personalInfo.email,
+      description: 'Get in touch'
     },
     {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      value: 'Aditya Bharti',
-      href: personalInfo.linkedin,
-      description: 'Connect professionally'
+      icon: Phone,
+      label: 'Phone',
+      value: personalInfo.phone,
+      description: 'Call me'
     },
     {
       icon: Code,
       label: 'HackerRank',
       value: contactData.profiles.hackerrank,
-      href: `https://www.hackerrank.com/${contactData.profiles.hackerrank}`,
       description: '5-Star Python & SQL'
     }
   ];
@@ -150,43 +147,6 @@ export const ContactSection: React.FC = () => {
             ))}
           </div>
 
-          {/* Social Profiles */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="pt-6 border-t border-gray-200 dark:border-gray-700"
-          >
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-              Professional Profiles
-            </h4>
-            <div className="space-y-3">
-              {socialProfiles.map((profile, index) => (
-                <motion.a
-                  key={profile.label}
-                  href={profile.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
-                  className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-200 hover:scale-105 group"
-                >
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-800/50 transition-colors">
-                    <profile.icon className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900 dark:text-white">
-                      {profile.label}
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      {profile.description}
-                    </p>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Contact Form */}
@@ -314,14 +274,6 @@ export const ContactSection: React.FC = () => {
             className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105"
           >
             Email Me Directly
-          </a>
-          <a
-            href={personalInfo.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105"
-          >
-            Connect on LinkedIn
           </a>
         </div>
       </motion.section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, ExternalLink, Mail, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Download, Mail } from 'lucide-react';
 import { personalInfo } from '../data/personalData';
 
 export const Hero: React.FC = () => {
@@ -64,12 +64,11 @@ export const Hero: React.FC = () => {
             >
               <motion.button
                 onClick={scrollToProjects}
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 text-lg shadow-lg hover:shadow-xl hover:scale-105"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span>View Projects</span>
-                <ExternalLink className="w-5 h-5" />
               </motion.button>
               
               <motion.button
@@ -131,22 +130,6 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex justify-center space-x-4 mt-6"
               >
-                <a
-                  href={personalInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 hover:scale-110"
-                >
-                  <Linkedin className="w-6 h-6 text-muted hover:text-white" />
-                </a>
-                <a
-                  href={personalInfo.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 hover:scale-110"
-                >
-                  <Github className="w-6 h-6 text-muted hover:text-white" />
-                </a>
                 <a
                   href={`mailto:${personalInfo.email}`}
                   className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 hover:scale-110"

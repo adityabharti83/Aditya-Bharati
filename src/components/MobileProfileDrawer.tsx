@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
+import { Mail, Phone, X, MapPin } from 'lucide-react';
 import { PersonalInfo } from '../types';
 import { cn } from '../utils/cn';
 
@@ -18,8 +18,6 @@ export const MobileProfileDrawer: React.FC<MobileProfileDrawerProps> = ({
   const contactItems = [
     { icon: Mail, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}` },
     { icon: Phone, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone}` },
-    { icon: Linkedin, label: 'LinkedIn', value: 'LinkedIn Profile', href: personalInfo.linkedin },
-    { icon: Github, label: 'GitHub', value: 'GitHub Profile', href: personalInfo.github },
   ];
 
   return (
