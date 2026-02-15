@@ -4,6 +4,7 @@ export interface PersonalInfo {
   bio: string;
   email: string;
   phone: string;
+  linkedin?: string;
   profileImage?: string;
 }
 

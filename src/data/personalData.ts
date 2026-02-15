@@ -60,6 +60,7 @@ export const personalInfo: PersonalInfo = {
   bio: "Computer Science Engineering student (B.E., 2025) specializing in data analysis and visualization. Skilled in Python, SQL, Power BI, and machine learning. Passionate about transforming data into actionable business insights.",
   email: "adityabharti6088@gmail.com",
   phone: "+91 8379084993",
+  linkedin: "https://www.linkedin.com/in/aditya-bharti/",
   profileImage: "/Profile Picture.jpg",
 };
 

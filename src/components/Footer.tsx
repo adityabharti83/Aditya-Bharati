@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/personalData';
 
 export const Footer: React.FC = () => {
@@ -22,6 +22,18 @@ export const Footer: React.FC = () => {
               Data Analyst | Python | SQL | Power BI
             </p>
           </div>
+
+          {personalInfo.linkedin && (
+            <a
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-white transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+          )}
 
           <a
             href={`mailto:${personalInfo.email}`}

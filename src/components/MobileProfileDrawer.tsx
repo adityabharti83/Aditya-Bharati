@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, X, MapPin } from 'lucide-react';
+import { Mail, Phone, X, MapPin, Linkedin } from 'lucide-react';
 import { PersonalInfo } from '../types';
 import { cn } from '../utils/cn';
 
@@ -18,6 +18,7 @@ export const MobileProfileDrawer: React.FC<MobileProfileDrawerProps> = ({
   const contactItems = [
     { icon: Mail, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}` },
     { icon: Phone, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone}` },
+    ...(personalInfo.linkedin ? [{ icon: Linkedin, label: 'LinkedIn', value: 'LinkedIn Profile', href: personalInfo.linkedin }] : [])
   ];
 
   return (
@@ -95,8 +96,8 @@ export const MobileProfileDrawer: React.FC<MobileProfileDrawerProps> = ({
                   <a
                     key={item.label}
                     href={item.href}
-                    target={item.label === 'LinkedIn' || item.label === 'GitHub' ? '_blank' : undefined}
-                    rel={item.label === 'LinkedIn' || item.label === 'GitHub' ? 'noopener noreferrer' : undefined}
+                    target={item.label === 'LinkedIn' ? '_blank' : '_self'}
+                    rel={item.label === 'LinkedIn' ? 'noopener noreferrer' : undefined}
                     className={cn(
                       "flex items-center space-x-3 p-3 rounded-xl transition-all duration-200",
                       "hover:bg-gray-50 dark:hover:bg-gray-800 group"
