@@ -4,9 +4,9 @@ import { GraduationCap, Briefcase, Award, Calendar, MapPin } from 'lucide-react'
 
 const educationData = {
   degree: "Bachelor of Engineering (B.E.) in Computer Engineering",
-  institution: "Pimpri Chinchwad College of Engineering",
+  institution: "P.R. Pote Patil College of Engineering & Management, Amravati",
   period: "2021 – 2025",
-  location: "Pune, Maharashtra"
+  location: "Amravati, Maharashtra"
 };
 
 const experienceData = [
